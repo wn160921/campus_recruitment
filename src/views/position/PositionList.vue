@@ -88,10 +88,10 @@
         </div>
 
         <div class="showDiv">
-            <div class="unitDiv" v-for="(item, index) in units" :key="item.id">
+            <div class="unitDiv" v-for="item in units" :key="item.id">
                 <div class="leftInfo">
                     <div class="logo" :style="{background:'url('+item.logo+')'}"></div>
-                    <div class="jobName">{{item.jobName}}</div>
+                    <div class="jobName canClick" @click="goPositionInfo(item.id)">{{item.jobName}}</div>
                     <div class="jobMoney">{{item.money}}</div>
                     <div class="location">{{item.location}}</div>
                     <div class="jobTimeType">{{item.jobTimeType}}</div>
@@ -122,13 +122,16 @@
     } from "@/datas/jobData"
 
     export default {
-        name: "position",
+        name: "positions",
         created() {
             this.fetchData()
         },
         methods: {
             fetchData() {
                 this.units = getData()
+            },
+            goPositionInfo(id){
+                this.$router.push({path:`/positions/${id}`})
             }
         },
         data() {

@@ -14,7 +14,7 @@
                 <router-link to="/lecture">宣讲会</router-link>
             </div>
             <div class="path">
-                <router-link to="/position">职位</router-link>
+                <router-link to="/positions">职位</router-link>
             </div>
         </div>
         <div class="hrDiv"></div>

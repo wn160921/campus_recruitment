@@ -6,6 +6,7 @@ import {post,fetch,patch,put} from './request'
 import ElementUI from 'element-ui';
 Vue.use(ElementUI)
 import 'element-ui/lib/theme-chalk/index.css';
+import '@/assets/css/common.css'
 
 //定义全局变量
 Vue.prototype.$post=post;

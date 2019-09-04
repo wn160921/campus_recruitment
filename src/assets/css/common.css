@@ -1,0 +1,6 @@
+.canClick{
+    cursor: pointer;
+}
+.canClick:hover{
+    color: #f26222;
+}

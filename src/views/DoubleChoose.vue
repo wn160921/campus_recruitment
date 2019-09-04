@@ -21,15 +21,21 @@
         </div>
         <div class="showDiv">
             <div class="doubleChooseDiv" v-for="item in lectures" :key="item.id">
-                <div class="logo" :style="{background:'url('+item.logo+')'}"></div>
-                <div class="name">{{item.name}}</div>
-                <div class="city">举办城市:{{item.city}}</div>
-                <div class="time">举办日期:{{item.dateStart}}---{{item.dateEnd}}</div>
-                <div class="right">
-                    <el-button type="primary">主要按钮</el-button>
-                    <el-button type="success">成功按钮</el-button>
+                <div class="left">
+                    <div class="logo" :style="{background:'url('+item.logo+')'}"></div>
+                    <div class="name">{{item.name}}</div>
+                    <div class="city">举办城市: {{item.city}}</div>
+                    <div class="time">举办日期: {{item.dateStart}}至{{item.dateEnd}}</div>
                 </div>
-                <div class="status"></div>
+                <div class="right">
+                    <div>
+                        <el-button type="primary" size="mini">进入会场</el-button>
+                    </div>
+                    <div>
+                        <el-button type="success" size="mini">单位报名</el-button>
+                    </div>
+                </div>
+                <div class="status" :class="{'statusOut':checkDate(item.dateStart,item.dateEnd)}"></div>
             </div>
             <el-pagination
                     background
@@ -44,7 +50,7 @@
     import {
         getData
     } from '@/datas/doubleChoose'
-
+    import moment from 'moment'
     export default {
         name: "lecture",
         created() {
@@ -53,6 +59,15 @@
         methods: {
             fetchData() {
                 this.lectures = getData();
+            },
+            checkDate(start,end){
+                start = moment(start)
+                end = moment(end);
+                let now = new Date();
+                if(start<now && now <end){
+                    return false
+                }
+                return true;
             }
         },
         data() {
@@ -117,7 +132,16 @@
     }
 
     .status{
+        width: 51px;
+        height: 51px;
+        position: absolute;
+        right: 0;
+        top: 0;
         background: url("../assets/valid.gif");
+    }
+
+    .statusOut{
+        background: url("../assets/lapsed.png");
     }
 
     .showDiv {
@@ -130,38 +154,48 @@
 
     .showDiv .doubleChooseDiv {
         position: relative;
-        height: 80px;
+        height: 100px;
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 10px;
         overflow: hidden;
-        line-height: 30px;
+        line-height: 33px;
+        border-bottom: #999999 solid 1px;
     }
 
-    .showDiv .doubleChooseDiv .logo{
-        width: 200px;
-        height: 100px;
+    .showDiv .doubleChooseDiv .right {
+        float: right;
+        padding-right: 40px;
+        padding-top: 15px;
+    }
+
+    .showDiv .doubleChooseDiv .left {
         float: left;
-    }
-    .showDiv .lectureDiv .unitName {
-        width: 200px;
-    }
-
-    .showDiv .lectureDiv .collegeName {
-        width: 200px;
+        height: 100%;
+        width: 500px;
+        overflow: hidden;
     }
 
-    .showDiv .lectureDiv .cityName {
+    .showDiv .doubleChooseDiv .logo {
         width: 200px;
+        height: 120px;
+        float: left;
+        margin-right: 20px;
     }
 
-    .showDiv .lectureDiv .location {
-        width: 250px;
+    .showDiv .doubleChooseDiv .name {
+        color: #f26222;
+        font-weight: bold;
     }
 
-    .showDiv .lectureDiv .time {
-        width: 200px;
+    .showDiv .doubleChooseDiv .city {
+        /*float: left;*/
     }
+
+    .showDiv .doubleChooseDiv .time {
+        /*float: left;*/
+    }
+
 
     .el-pagination {
         margin-top: 10px;
