@@ -11,41 +11,77 @@ let unitInfos = [
         id:'1',
         logo:'',
         name:'小区超市集团',
+        city:'北京',
         industry:'批发和零售业',//行业
         type:'民营企业',//单位性质
         scale:'0-50人',//单位规模
         homePage:'www.baidu.com',//单位网址
-        introduction:''
+        introduction:'我是简介',
+        contact:{
+            name:'郭橘夏',
+            phone:'13376778788',
+            tel:'6683093',
+            email:'6683093@126.com',
+            intelnet:'',
+            address:'内蒙古自治区包头市昆区内蒙古科技大学2#实验楼A区205'
+        }
     },
     {
         id:'2',
         logo:'',
         name:'世界石油化工联合集团',
+        city:'上海',
         industry:'采矿业',
         type:'国有企业',
         scale:'50000人以上',
         homePage:'www.baidu.com',
-        introduction:''
+        introduction:'',
+        contact:{
+            name:'夏侯无疆',
+            phone:'12209098989',
+            tel:'1234567',
+            email:'123456@123.com',
+            intelnet:'',
+            address:'屹立于包头教育培训的前沿'
+        }
     },
     {
         id:'3',
         logo:'',
         name:'新世纪英语',
+        city:'杭州',
         industry:'教育',
         type:'教育/科研/咨询/法律类',
         scale:'1000-2000',
         homePage:'www.baidu.com',
-        introduction:introText[0]
+        introduction:introText[0],
+        contact:{
+            name:'长孙无忌',
+            phone:'189123456678',
+            tel:'9986467',
+            email:'345678gh@gjj.com',
+            intelnet:'www.baidu.com',
+            address:'学业规划指导中心的建立'
+        }
     },
     {
         id:'4',
         logo:'',
         name:'中国人寿保险',
+        city:'上海',
         industry:'保险',
         type:'国有企业',
         scale:'3000',
         homePage:'',
-        introduction:''
+        introduction:'',
+        contact:{
+            name:'盲僧说我长得帅',
+            phone:'17856564343',
+            tel:'56878890',
+            email:'ftgjcvgbh@vgbhj.fgbh',
+            intelnet:'',
+            address:'教育市场口'
+        }
     }
 ]
 

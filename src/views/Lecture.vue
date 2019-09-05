@@ -42,7 +42,7 @@
                 <div class="time">举办时间</div>
             </div>
             <div class="lectureDiv" v-for="item in lectures" :key="item.id">
-                <div class="unitName">{{item.unitName}}</div>
+                <div class="unitName canClick" @click="goUnitInfo(item.id)">{{item.unitName}}</div>
                 <div class="collegeName">{{item.collegeName}}</div>
                 <div class="cityName">{{item.cityName}}</div>
                 <div class="location">{{item.location}}</div>
@@ -70,6 +70,9 @@
         methods: {
             fetchData() {
                 this.lectures = getData();
+            },
+            goUnitInfo(id){
+                this.$router.push({path:`/units/${id}`})
             }
         },
         data() {

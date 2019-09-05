@@ -23,8 +23,6 @@
 </template>
 
 <script>
-
-
     export default {
         name: 'app',
         components: {},
@@ -36,37 +34,42 @@
     }
 </script>
 
-<style>
+<style lang="scss">
     body{
-        background: #eee;
+        background: #f9f9f9;
     }
     #app {
         min-width: 1200px;
     }
-    .router-link-active{
+
+    .router-link-active {
         color: red;
         font-size: larger;
-
     }
-    .head{
+
+    .path a{
+        text-decoration: none;
+    }
+
+    .head {
         text-align: center;
         background: white;
-    }
-    .head div {
-        display: inline-block;
-        height: 100px;
-        line-height: 100px;
-        vertical-align: middle;
-    }
+        border-bottom: #f26222 2px solid;
 
-    .head .logo{
-        width: 500px;
-        font-size: larger;
-    }
+        div {
+            display: inline-block;
+            height: 100px;
+            line-height: 100px;
+            vertical-align: middle;
+        }
+        .logo {
+            width: 500px;
+            font-size: larger;
+        }
+        .path {
+            width: 100px;
+        }
 
-    .head .path{
-        width: 100px;
     }
-
 
 </style>

@@ -23,13 +23,13 @@
             <div class="doubleChooseDiv" v-for="item in lectures" :key="item.id">
                 <div class="left">
                     <div class="logo" :style="{background:'url('+item.logo+')'}"></div>
-                    <div class="name">{{item.name}}</div>
+                    <div class="name canClick" @click="goJobFair(item.id)">{{item.name}}</div>
                     <div class="city">举办城市: {{item.city}}</div>
                     <div class="time">举办日期: {{item.dateStart}}至{{item.dateEnd}}</div>
                 </div>
                 <div class="right">
                     <div>
-                        <el-button type="primary" size="mini">进入会场</el-button>
+                        <el-button type="primary" size="mini" @click="goJobFair(item.id)">进入会场</el-button>
                     </div>
                     <div>
                         <el-button type="success" size="mini">单位报名</el-button>
@@ -59,6 +59,9 @@
         methods: {
             fetchData() {
                 this.lectures = getData();
+            },
+            goJobFair(id) {
+                this.$router.push({ path: `/jobFairs/${id}` });
             },
             checkDate(start,end){
                 start = moment(start)

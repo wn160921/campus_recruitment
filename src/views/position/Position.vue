@@ -12,8 +12,8 @@
                 <div>
                     <div class="positionName">{{positionInfo.name}}</div>
                     <div class="money">{{positionInfo.money}}</div>
-                    <el-button type="warning" icon="el-icon-star-off" plain>申请职位</el-button>
-                    <el-button type="warning">收藏职位</el-button>
+                    <el-button type="warning" icon="el-icon-star-off" size="mini" plain>申请职位</el-button>
+                    <el-button type="warning" size="mini">收藏职位</el-button>
                 </div>
                 <div>
                     <div class="publishTime">{{positionInfo.publishTime}} 发布</div>
@@ -152,7 +152,7 @@
 
     .left .baseInfo .money {
         display: inline-block;
-        width: 240px;
+        width: 280px;
         color: #f26222;
     }
 
@@ -171,10 +171,6 @@
 
         margin-left: 20px;
         float: right;
-    }
-
-    .grayColor {
-        color: #999;
     }
 
     .left .detailInfo {

@@ -98,7 +98,7 @@
                     <div class="educationRequire">{{item.educationRequire}}</div>
                 </div>
                 <div class="middleInfo">
-                    <div class="unitName">{{item.unitName}}</div>
+                    <div class="unitName canClick" @click="goUnitInfo(item.unitId)">{{item.unitName}}</div>
                     <div class="unitType">{{item.unitType}}</div>
                     <div class="unitScale">{{item.unitScale}}</div>
                 </div>
@@ -132,11 +132,14 @@
             },
             goPositionInfo(id){
                 this.$router.push({path:`/positions/${id}`})
+            },
+            goUnitInfo(id){
+                this.$router.push({path:`/units/${id}`})
             }
         },
         data() {
             return {
-                keyword: '',
+                  keyword: '',
                 industry: '0',
                 money: "不限",
                 education: "不限",
