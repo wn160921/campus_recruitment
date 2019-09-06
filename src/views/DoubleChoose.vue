@@ -101,7 +101,7 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
     .el-input {
         width: auto;
         margin-right: 10px;
@@ -119,86 +119,74 @@
         width: 1200px;
         margin: 10px auto;
         padding: 10px;
+
+        .findDiv {
+            background: white;
+            padding: 5px;
+        }
+
+        .filter {
+            padding: 10px;
+            height: 20px;
+            font-size: 14px;
+            line-height: 30px;
+            vertical-align: middle;
+        }
+        .showDiv {
+            width: 1190px;
+            margin-top: 10px;
+            padding: 5px;
+            background: white;
+
+            .status{
+                width: 51px;
+                height: 51px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                background: url("../assets/valid.gif");
+            }
+
+            .statusOut{
+                background: url("../assets/lapsed.png");
+            }
+
+            .doubleChooseDiv {
+                position: relative;
+                height: 100px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 10px;
+                overflow: hidden;
+                line-height: 33px;
+                border-bottom: #999999 solid 1px;
+
+                .right {
+                    float: right;
+                    padding-right: 40px;
+                    padding-top: 15px;
+                }
+                .left {
+                    float: left;
+                    height: 100%;
+                    width: 500px;
+                    overflow: hidden;
+
+                    .logo {
+                        width: 200px;
+                        height: 120px;
+                        float: left;
+                        margin-right: 20px;
+                    }
+                    .name {
+                        color: #f26222;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
     }
-
-    .findDiv {
-        background: white;
-        padding: 5px;
-    }
-
-    .filter {
-        padding: 10px;
-        height: 20px;
-        font-size: 14px;
-        line-height: 30px;
-        vertical-align: middle;
-    }
-
-    .status{
-        width: 51px;
-        height: 51px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        background: url("../assets/valid.gif");
-    }
-
-    .statusOut{
-        background: url("../assets/lapsed.png");
-    }
-
-    .showDiv {
-        width: 1190px;
-        margin-top: 10px;
-        padding: 5px;
-        background: white;
-    }
-
-
-    .showDiv .doubleChooseDiv {
-        position: relative;
-        height: 100px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 10px;
-        overflow: hidden;
-        line-height: 33px;
-        border-bottom: #999999 solid 1px;
-    }
-
-    .showDiv .doubleChooseDiv .right {
-        float: right;
-        padding-right: 40px;
-        padding-top: 15px;
-    }
-
-    .showDiv .doubleChooseDiv .left {
-        float: left;
-        height: 100%;
-        width: 500px;
-        overflow: hidden;
-    }
-
-    .showDiv .doubleChooseDiv .logo {
-        width: 200px;
-        height: 120px;
-        float: left;
-        margin-right: 20px;
-    }
-
-    .showDiv .doubleChooseDiv .name {
-        color: #f26222;
-        font-weight: bold;
-    }
-
-    .showDiv .doubleChooseDiv .city {
-        /*float: left;*/
-    }
-
-    .showDiv .doubleChooseDiv .time {
-        /*float: left;*/
-    }
-
 
     .el-pagination {
         margin-top: 10px;

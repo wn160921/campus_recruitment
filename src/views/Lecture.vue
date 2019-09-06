@@ -71,8 +71,8 @@
             fetchData() {
                 this.lectures = getData();
             },
-            goUnitInfo(id){
-                this.$router.push({path:`/units/${id}`})
+            goUnitInfo(id) {
+                this.$router.push({path: `/units/${id}`})
             }
         },
         data() {
@@ -103,7 +103,7 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
     .el-input {
         width: auto;
         margin-right: 10px;
@@ -121,65 +121,50 @@
         width: 1200px;
         margin: 10px auto;
         padding: 10px;
+
+        .findDiv {
+            background: white;
+            padding: 5px;
+        }
+        .filter {
+            padding: 10px;
+            height: 20px;
+            font-size: 14px;
+            line-height: 30px;
+            vertical-align: middle;
+        }
+
+        .showDiv {
+            width: 1190px;
+            margin-top: 10px;
+            padding: 5px;
+            background: white;
+
+            .myhead {
+                background: #eee;
+            }
+            .lectureDiv {
+                height: 30px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 10px;
+                overflow: hidden;
+                line-height: 30px;
+
+                div {
+                    float: left;
+                }
+
+                .unitName, .collegeName, .cityName, .time{
+                    width: 200px;
+                }
+                .location {
+                    width: 250px;
+                }
+            }
+        }
     }
 
-    .findDiv {
-        background: white;
-        padding: 5px;
-    }
-
-    .filter {
-        padding: 10px;
-        height: 20px;
-        font-size: 14px;
-        line-height: 30px;
-        vertical-align: middle;
-    }
-
-    .showDiv {
-        width: 1190px;
-        margin-top: 10px;
-        padding: 5px;
-        background: white;
-    }
-
-    .myhead {
-        background: #eee;
-
-    }
-
-    .showDiv .lectureDiv {
-        height: 30px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 10px;
-        overflow: hidden;
-        line-height: 30px;
-    }
-
-    .showDiv .lectureDiv div {
-        float: left;
-    }
-
-    .showDiv .lectureDiv .unitName {
-        width: 200px;
-    }
-
-    .showDiv .lectureDiv .collegeName {
-        width: 200px;
-    }
-
-    .showDiv .lectureDiv .cityName {
-        width: 200px;
-    }
-
-    .showDiv .lectureDiv .location {
-        width: 250px;
-    }
-
-    .showDiv .lectureDiv .time {
-        width: 200px;
-    }
 
     .el-pagination {
         margin-top: 10px;

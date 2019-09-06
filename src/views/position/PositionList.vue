@@ -231,7 +231,7 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
     .el-input {
         width: auto;
         margin-right: 10px;
@@ -249,116 +249,100 @@
         width: 1200px;
         margin: 10px auto;
         padding: 10px;
-    }
 
-    .findDiv {
-        background: white;
-        padding: 5px;
-    }
+        .findDiv {
+            background: white;
+            padding: 5px;
 
-    .showDiv {
-        width: 1190px;
-        margin-top: 10px;
-        padding: 5px;
-        background: white;
-    }
+            .filter {
+                padding: 10px;
+                height: 20px;
+                font-size: 14px;
+                line-height: 30px;
+                vertical-align: middle;
+            }
+        }
+        .showDiv {
+            width: 1190px;
+            margin-top: 10px;
+            padding: 5px;
+            background: white;
+            .unitDiv {
+                width: 1200px;
+                height: 70px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                overflow: hidden;
+                border-bottom: #eee solid 1px;
+                line-height: 35px;
 
-    .filter {
-        padding: 10px;
-        height: 20px;
-        font-size: 14px;
-        line-height: 30px;
-        vertical-align: middle;
-    }
+                .leftInfo {
+                    display: inline-block;
+                    width: 600px;
+                    float: left;
 
-    .showDiv .unitDiv {
-        width: 1200px;
-        height: 70px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        overflow: hidden;
-        border-bottom: #eee solid 1px;
-        line-height: 35px;
-    }
+                    .logo {
+                        width: 50px;
+                        height: 50px;
+                        margin-top: 10px;
+                        margin-right: 20px;
+                        margin-left: 20px;
+                        background-size: cover;
+                        float: left;
+                    }
 
-    .showDiv .unitDiv .leftInfo {
-        display: inline-block;
-        width: 600px;
-        float: left;
-    }
+                    .jobName {
+                        float: left;
+                        padding-right: 10px;
+                    }
+                    .jobMoney {
+                        font-size: small;
+                        color: red;
+                        height: 35px;
+                        line-height: 35px;
+                    }
+                    .location {
+                        color: #999;
+                        padding-right: 5px;
+                        float: left;
+                    }
+                    .jobTimeType {
+                        color: #999;
+                        padding-right: 5px;;
+                        float: left;
+                    }
+                    .educationRequire {
+                        color: #999;
+                    }
+                }
 
-    .showDiv .unitDiv .middleInfo {
-        display: inline-block;
-        width: 400px;
-        float: left;
-    }
+                .middleInfo {
+                    display: inline-block;
+                    width: 400px;
+                    float: left;
 
-    .showDiv .unitDiv .rightInfo {
-        width: 200px;
-        display: inline-block;
-    }
+                    .unitType {
+                        color: #999;
+                        padding-right: 5px;
+                        float: left;
+                    }
+                    .unitScale {
+                        color: #999;
+                        padding-right: 5px;
+                    }
+                }
+                .rightInfo {
+                    width: 200px;
+                    display: inline-block;
 
-    .showDiv .unitDiv .leftInfo .logo {
-        width: 50px;
-        height: 50px;
-        margin-top: 10px;
-        margin-right: 20px;
-        margin-left: 20px;
-        background-size: cover;
-        float: left;
-    }
+                    .publishTime {
+                        color: #999;
+                    }
 
-    .showDiv .unitDiv .leftInfo .jobName {
-        float: left;
-        padding-right: 10px;
-    }
+                }
 
-    .showDiv .unitDiv .leftInfo .jobMoney {
-        font-size: small;
-        color: red;
-        height: 35px;
-        line-height: 35px;
-    }
-
-    .showDiv .unitDiv .leftInfo .location {
-        color: #999;
-        padding-right: 5px;
-    }
-
-    .showDiv .unitDiv .leftInfo .jobTimeType {
-        color: #999;
-        padding-right: 5px;;
-    }
-
-    .showDiv .unitDiv .leftInfo .educationRequire {
-        color: #999;
-    }
-
-    .showDiv .unitDiv .middleInfo .unitType {
-        color: #999;
-        padding-right: 5px;
-    }
-
-    .showDiv .unitDiv .middleInfo .unitScale {
-        color: #999;
-        padding-right: 5px;
-    }
-
-    .showDiv .unitDiv .rightInfo .publishTime {
-        color: #999;
-    }
-
-
-    .showDiv .unitDiv .leftInfo .location {
-        float: left;
-    }
-
-    .showDiv .unitDiv .leftInfo .jobTimeType {
-        float: left;
-    }
-
-    .showDiv .unitDiv .middleInfo .unitType {
-        float: left;
+            }
+        }
     }
 
     .el-pagination{

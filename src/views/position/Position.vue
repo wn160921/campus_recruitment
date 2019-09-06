@@ -113,142 +113,127 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
     .container {
         width: 1200px;
         margin: 10px auto;
         padding: 10px;
+
+        .myBreadcrumb {
+            background: white;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .left {
+            float: left;
+            width: 900px;
+            margin-top: 10px;
+
+            .baseInfo {
+                margin-bottom: 10px;
+                padding: 10px;
+                background: white;
+
+                .positionName {
+                    display: inline-block;
+                    width: 400px;
+                    font-size: large;
+                }
+                .money {
+                    display: inline-block;
+                    width: 280px;
+                    color: #f26222;
+                }
+                .publishTime {
+                    display: inline-block;
+                    font-size: small;
+                    margin-right: 10px;
+                }
+                .scanNum {
+                    display: inline-block;
+                    font-size: small;
+                }
+                .share {
+                    margin-left: 20px;
+                    float: right;
+                }
+            }
+            .detailInfo {
+                background: white;
+                padding: 10px;
+
+                .positionRequire {
+                    overflow: hidden;
+
+                    li {
+                        float: left;
+                        width: 400px;
+                    }
+                }
+                .description {
+                    font-size: 14px;
+                }
+                .introduction {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .right {
+            width: 280px;
+            margin-top: 10px;
+            float: left;
+
+            .unitInfo {
+                background: white;
+                margin-left: 10px;
+                padding: 10px;
+                overflow: auto;
+
+                .logo {
+                    width: 100px;
+                    margin: 0 auto;
+                }
+                .name {
+                    text-align: center;
+                }
+            }
+            .moreInfo {
+                margin-left: 10px;
+                margin-top: 10px;
+
+                .title {
+                    margin-bottom: 2px;
+                    background: white;
+                    padding: 10px;
+                }
+                .positions {
+                    background: white;
+                    padding: 10px;
+                    overflow: auto;
+
+                    li {
+                        float: left;
+                        margin-bottom: 10px;
+
+                        div {
+                            display: inline-block;
+                            padding-right: 10px;
+                        }
+                        .money {
+                            color: #f26222;
+                        }
+                    }
+                }
+            }
+        }
     }
-
-    .myBreadcrumb {
-        background: white;
-        padding: 10px;
-        margin-top: 10px;
-    }
-
-    .left {
-        float: left;
-        width: 900px;
-        margin-top: 10px;
-    }
-
-    .right {
-        width: 280px;
-        margin-top: 10px;
-        float: left;
-    }
-
-    .left .baseInfo {
-        margin-bottom: 10px;
-        padding: 10px;
-        background: white;
-    }
-
-    .left .baseInfo .positionName {
-        display: inline-block;
-        width: 400px;
-        font-size: large;
-    }
-
-    .left .baseInfo .money {
-        display: inline-block;
-        width: 280px;
-        color: #f26222;
-    }
-
-    .left .baseInfo .publishTime {
-        display: inline-block;
-        font-size: small;
-        margin-right: 10px;
-    }
-
-    .left .baseInfo .scanNum {
-        display: inline-block;
-        font-size: small;
-    }
-
-    .left .baseInfo .share {
-
-        margin-left: 20px;
-        float: right;
-    }
-
-    .left .detailInfo {
-        background: white;
-        padding: 10px;
-    }
-
 
     ul {
         list-style: none;
         margin: 0;
         padding: 0;
         font-size: 14px;
-    }
-
-    .left .detailInfo .positionRequire {
-        overflow: hidden;
-    }
-
-    .left .detailInfo .positionRequire li {
-        float: left;
-        width: 400px;
-    }
-
-    .left .detailInfo .description {
-        font-size: 14px;
-    }
-
-    .left .detailInfo .introduction {
-        font-size: 14px;
-    }
-
-
-    .right .unitInfo {
-        background: white;
-        margin-left: 10px;
-        padding: 10px;
-        overflow: auto;
-    }
-
-    .right .moreInfo {
-        margin-left: 10px;
-        margin-top: 10px;
-    }
-
-    .right .moreInfo .title {
-        margin-bottom: 2px;
-        background: white;
-        padding: 10px;
-    }
-
-    .right .moreInfo .positions {
-        background: white;
-        padding: 10px;
-        overflow: auto;
-    }
-
-    .right .moreInfo .positions li {
-        float: left;
-        margin-bottom: 10px;
-    }
-
-    .right .moreInfo .positions li div {
-        display: inline-block;
-        padding-right: 10px;
-    }
-
-    .right .moreInfo .positions li .money {
-        color: #f26222;
-    }
-
-    .right .unitInfo .logo {
-        width: 100px;
-        margin: 0 auto;
-    }
-
-    .right .unitInfo .name {
-        text-align: center;
     }
 
 
